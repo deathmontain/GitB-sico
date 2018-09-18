@@ -1,0 +1,38 @@
+git init                                                     //Inicia o diretório que deseja controlar
+
+git branch                                                   //Pra ver as branchs disponiveis
+
+git checkout -b desenvolvimento                              //Pra trabalhar numa branch "minha" (não é boa prática trabalhar na master), "-b" já acessa direto a branch criada
+       	git checkout [nomeDoArquivo.extensão]                //Para voltar o arquivo para a situação do último commit
+	git checkout [nomeDaBranch]                          //Para mudar de uma branch pra outra
+        git branch -d {nome do branch]                       //Apaga uma branch local
+	git push [nome do origin] [nome do branch] --delete  //Apaga o branch remotamente
+git add [nomeDoArquivo]                                      //Pra adicionar o arquivo que fiz o "update"
+	git add .                                            //Adiciona todos os arquivos do diretório
+       	git reset HEAD [nomeDoArquivo.extensão]              //Pra tirar o arquivo do estatus de "index"
+
+git pull                                                    //Para atualizar a branch
+
+git merge                                                    //Atualiza a branch master com a minha branch criada
+
+git rebase [nomeDaBranch]                                    //Atualiza uma branch com base em outra
+
+git status                                                   //Verifica o estado dos arquivos
+
+git log                                                      //Verifica o historico dos arquivos "commitados"
+	git log -p                                           //Verifica o que foi mudado entre os arquivos "commitados"  
+
+git commit -m "[Assunto do que foi alterado]"                //Efetua o commit dos arquivos alterados
+	git reset [idDoLog]                                  //Para desfazer o commit
+	git revert [idDoLog]                                 //Para desfazer um commit antigo sem perder os que foram feitos depois
+	git stash                                            //Guarda as alterações que não foram "commitadas"
+	git stash list                                       //Para verificar as "stashes guardadas"
+	git stash pop                                        //Retoma a ultima stash da lista
+	git stash apply [numeroDaStash]                      //Retoma uma stashe mais específica
+ 	git stash drop                                       //Apaga a stash depois de a mesma ter sido "trabalhada"
+ 
+	git bisect start                                     //Inicia o modo bisect, procurar por modo de eliminação um commit que preciso alterar
+	git bisect bad HEAD                                  //Commit que está com "problemas"
+	git bisect good [idDoLog]                            //Commit que estava "certo"
+
+git push                                                     //Envia as alterações do arquivo para o servidor
