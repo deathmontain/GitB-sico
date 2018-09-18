@@ -7,11 +7,13 @@ git checkout -b desenvolvimento                              //Pra trabalhar num
 	git checkout [nomeDaBranch]                          //Para mudar de uma branch pra outra
         git branch -d {nome do branch]                       //Apaga uma branch local
 	git push [nome do origin] [nome do branch] --delete  //Apaga o branch remotamente
+	git remote					     //Mostra quais repositórios remotos existem
+        git remote [nomeDoRepositorio] + URL                 //Cria o repositório	
 git add [nomeDoArquivo]                                      //Pra adicionar o arquivo que fiz o "update"
 	git add .                                            //Adiciona todos os arquivos do diretório
        	git reset HEAD [nomeDoArquivo.extensão]              //Pra tirar o arquivo do estatus de "index"
 
-git pull                                                    //Para atualizar a branch
+git pull                                                     //Para atualizar a branch
 
 git merge                                                    //Atualiza a branch master com a minha branch criada
 
